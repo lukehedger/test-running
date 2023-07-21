@@ -1,0 +1,30 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        workspace: ['node-assert']
+
+    steps:
+      - uses: actions/checkout@v3.5.2
+
+      - name: Setup Node
+        uses: actions/setup-node@v3.6.0
+        with:
+          cache: 'npm'
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ${{ github.workspace }}/${{ matrix.workspace }}
+
+      - name: Execute tests
+        run: npm test
+        working-directory: ${{ github.workspace }}/${{ matrix.workspace }}

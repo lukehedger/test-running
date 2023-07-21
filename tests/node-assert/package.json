@@ -1,0 +1,13 @@
+{
+  "name": "node-assert",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_NO_WARNINGS=1 xv --loader=tsx"
+  },
+  "devDependencies": {
+    "tsx": "3.12.7",
+    "xv": "2.1.1"
+  }
+}

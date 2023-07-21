@@ -3,11 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "test": "NODE_NO_WARNINGS=1 xv --loader=tsx test-me.ts"
-  },
-  "devDependencies": {
-    "tsx": "3.12.7",
-    "xv": "2.1.1"
-  }
+  "workspaces": [
+    "tests/**"
+  ]
 }
