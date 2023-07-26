@@ -24,12 +24,12 @@ We will compare the following testing stacks:
 
 | Stack                      | Install time | Execute time |
 | -------------------------- | ------------ | ------------ |
-| Jest with ts-jest          |              |              |
-| Jest with swc              |              |              |
-| Vitest                     |              |              |
-| Deno                       |              |              |
 | Bun                        |              |              |
+| Deno                       |              |              |
+| Jest with swc              |              |              |
+| Jest with ts-jest          |              |              |
 | Node.js assert (+ xv, tsx) | ~1s          | ~20s         |
+| Vitest                     |              |              |
 
 #### Test case
 

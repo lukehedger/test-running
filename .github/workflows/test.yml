@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        workspace: ['node-assert']
+        workspace: ['bun', 'deno', 'jest-ts-jest', 'jest-swc', 'node-assert', 'vitest']
 
     defaults:
       run:

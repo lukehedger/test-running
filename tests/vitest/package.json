@@ -1,0 +1,10 @@
+{
+  "name": "vitest",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo Add your test execution command"
+  },
+  "devDependencies": {}
+}
