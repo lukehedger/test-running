@@ -12,10 +12,6 @@ jobs:
       matrix:
         workspace: ['bun', 'deno', 'jest-ts-jest', 'jest-swc', 'node-assert', 'vitest']
 
-    defaults:
-      run:
-        working-directory: ${{ github.workspace }}/tests/${{ matrix.workspace }}
-
     steps:
       - uses: actions/checkout@v3.5.2
 
@@ -27,6 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        working-directory: ${{ github.workspace }}/tests/${{ matrix.workspace }}
 
       - name: Execute tests
         run: npm test
+        working-directory: ${{ github.workspace }}/tests/${{ matrix.workspace }}
