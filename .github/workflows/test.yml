@@ -42,6 +42,4 @@ jobs:
       - uses: oven-sh/setup-bun@v1
 
       - run: npm ci
-
-      - run: bun install
       - run: bun test
