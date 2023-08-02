@@ -1,0 +1,26 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3.5.2
+
+      - name: Setup Node
+        uses: actions/setup-node@v3.6.0
+        with:
+          cache: 'npm'
+          cache-dependency-path: ${{ github.workspace }}/tests/vitest/package-lock.json
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ${{ github.workspace }}/tests/vitest
+
+      - name: Execute tests
+        run: npm run test
+        working-directory: ${{ github.workspace }}/tests/vitest
+  
