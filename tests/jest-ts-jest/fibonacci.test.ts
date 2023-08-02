@@ -1,8 +1,15 @@
-/*
-Write your tests here!
+import { fibonacciRecursive } from '../../fibonacci';
 
-Remember to implement these tests:
-  assert.equal(fibonacciRecursive(40), 102334155);
-  assert.equal(fibonacciRecursive(43), 433494437);
-  assert.equal(fibonacciRecursive(45), 1134903170);
-*/
+describe('fibonacciRecursive', () => {
+  test('fibonacciRecursive(40)', () => {
+    expect(fibonacciRecursive(40)).toBe(102334155);
+  });
+
+  test('fibonacciRecursive(43)', () => {
+    expect(fibonacciRecursive(43)).toBe(433494437);
+  });
+
+  test('fibonacciRecursive(45)', () => {
+    expect(fibonacciRecursive(45)).toBe(1134903170);
+  });
+});
