@@ -30,7 +30,6 @@ jobs:
         run: npm test
         working-directory: ${{ github.workspace }}/tests/${{ matrix.workspace }}
 
-jobs:
   bun-test:
     runs-on: ubuntu-latest
 
