@@ -43,3 +43,18 @@ jobs:
 
       - run: npm ci
       - run: bun test
+      
+  deno-test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}/tests/deno
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: denoland/setup-deno@v1
+        with:
+         deno-version: v1.x
+      - run: npm ci
+      - run: deno test
