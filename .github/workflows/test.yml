@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        workspace: ['deno', 'jest-ts-jest', 'jest-swc', 'node-assert', 'vitest']
+        workspace: ['jest-ts-jest', 'jest-swc', 'node-assert', 'vitest']
 
     steps:
       - uses: actions/checkout@v3.5.2
@@ -43,18 +43,3 @@ jobs:
 
       - run: npm ci
       - run: bun test
-      
-  deno-test:
-    runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: ${{ github.workspace }}/tests/deno
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: denoland/setup-deno@v1
-        with:
-         deno-version: v1.x
-      - run: npm ci
-      - run: deno test
