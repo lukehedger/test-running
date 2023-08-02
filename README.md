@@ -17,7 +17,7 @@ We will compare the following testing stacks:
 - [Vitest](https://vitest.dev/)
 - [Deno](https://deno.land/manual@v1.35.2/basics/testing)
 - [Bun](https://bun.sh/docs/cli/test)
-- [Node.js assert](https://nodejs.org/api/assert.html) (with [xv](https://github.com/typicode/xv) and [tsx](https://github.com/esbuild-kit/tsx))
+- [Node.js assert](https://nodejs.org/api/assert.html) (with [tsx](https://github.com/esbuild-kit/tsx))
 - New challengers welcome!
 
 #### Results
