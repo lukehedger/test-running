@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        workspace: ['bun', 'deno', 'jest-ts-jest', 'jest-swc', 'node-assert', 'vitest']
+        workspace: ['deno', 'jest-ts-jest', 'jest-swc', 'node-assert', 'vitest']
 
     steps:
       - uses: actions/checkout@v3.5.2
@@ -29,3 +29,17 @@ jobs:
       - name: Execute tests
         run: npm test
         working-directory: ${{ github.workspace }}/tests/${{ matrix.workspace }}
+
+  bun-test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}/tests/bun
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+
+      - run: npm ci
+      - run: bun test
