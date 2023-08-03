@@ -22,14 +22,14 @@ We will compare the following testing stacks:
 
 #### Results
 
-| Stack                      | Job time | Execute time |
-| -------------------------- | -------- | ------------ |
-| Bun                        | 23s      | 15s          |
-| Deno                       | 30s      | 24s          |
-| Jest with swc              | 32s      | 15s          |
-| Jest with ts-jest          | 38s      | 22s          |
-| Node.js assert (+ xv, tsx) | 38s      | 23s          |
-| Vitest                     | 35s      | 20s          |
+| Stack                   | Job time | Execute time |
+| ----------------------- | -------- | ------------ |
+| Bun                     | 23s      | 15s          |
+| Deno                    | 30s      | 24s          |
+| Jest with swc           | 32s      | 15s          |
+| Jest with ts-jest       | 38s      | 22s          |
+| Node.js assert with tsx | 38s      | 23s          |
+| Vitest                  | 35s      | 20s          |
 
 #### Test case
 
