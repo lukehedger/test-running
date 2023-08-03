@@ -5,8 +5,8 @@ Let's go down the test runner rabbit hole ⛳️🐇
 ### Constraints
 
 - Write code and tests in TypeScript
-- Install time <5s
-- Execution time <20s
+- Total job time <35s
+- Test execution time <20s
 
 ### Comparison
 
@@ -22,14 +22,14 @@ We will compare the following testing stacks:
 
 #### Results
 
-| Stack                      | Install time | Execute time |
-| -------------------------- | ------------ | ------------ |
-| Bun                        |              |              |
-| Deno                       |              |              |
-| Jest with swc              |              |              |
-| Jest with ts-jest          |              |              |
-| Node.js assert (+ xv, tsx) | ~1s          | ~20s         |
-| Vitest                     |              |              |
+| Stack                      | Job time | Execute time |
+| -------------------------- | -------- | ------------ |
+| Bun                        | 23s      | 15s          |
+| Deno                       | 30s      | 24s          |
+| Jest with swc              | 32s      | 15s          |
+| Jest with ts-jest          | 38s      | 22s          |
+| Node.js assert (+ xv, tsx) | 38s      | 23s          |
+| Vitest                     | 35s      | 20s          |
 
 #### Test case
 
