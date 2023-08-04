@@ -42,7 +42,7 @@ jobs:
       - uses: oven-sh/setup-bun@v1
 
       - run: npm ci
-      - run: bun test
+      - run: npm test
 
   deno-test:
     runs-on: ubuntu-latest
