@@ -4,10 +4,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "echo Add your test execution command"
+    "test": "bun test"
   },
   "devDependencies": {
-    "bun-types": "^0.7.1",
+    "bun-types": "0.7.2",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "bun": "0.7.2"
   }
 }
